@@ -35,7 +35,7 @@ const PlayerSection = ({ life, setLife, backgroundColor, flip }) => {
       const timeout = setTimeout(() => {
         setTrackerText("");
         setDelta(0); // Reset delta after clearing the tracker text
-      }, 2500);
+      }, 22500);
       return () => clearTimeout(timeout);
     }
   }, [delta]);
@@ -47,6 +47,21 @@ const PlayerSection = ({ life, setLife, backgroundColor, flip }) => {
         transform: flip ? "rotate(180deg)" : "none",
       }}
     >
+      <div style={subcontentStyle}>
+        <div style={levelStyle}>a</div>
+        <div style={statusStyle}>
+          <p
+            style={
+              flip
+                ? { ...trackerStyle, transform: "rotate(360deg)" }
+                : trackerStyle
+            }
+          >
+            {trackerText}
+          </p>
+        </div>
+      </div>
+
       <div style={controlsStyle}>
         <button
           onClick={increaseLife}
@@ -64,16 +79,28 @@ const PlayerSection = ({ life, setLife, backgroundColor, flip }) => {
           -
         </button>
       </div>
-
-      <p
-        style={
-          flip ? { ...trackerStyle, transform: "rotate(360deg)" } : trackerStyle
-        }
-      >
-        {trackerText}
-      </p>
     </div>
   );
+};
+
+const subcontentStyle = {
+  display: "flex",
+  height: "50px",
+  width: "100%",
+
+  backgroundColor: "white",
+};
+const levelStyle = {
+  backgroundColor: "red",
+  width: "20%",
+};
+
+const statusStyle = {
+  backgroundColor: "black",
+  width: "80%",
+  alignItems: "center",
+  justifyContent: "center",
+  display: "flex",
 };
 
 const playerSectionStyle = {
@@ -83,7 +110,7 @@ const playerSectionStyle = {
   alignItems: "center",
   justifyContent: "center",
   marginTop: "1rem",
-  backgroundImage: "url('/bgimage.jpg')",
+  backgroundImage: "url('/bgimage4.jpg')",
   backgroundSize: "cover", // Ensure the image covers the entire area
   backgroundPosition: "center", // Center the image
 };

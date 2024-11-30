@@ -9,11 +9,11 @@ const AdSpace = () => {
 };
 
 const adSpaceStyle = {
-  position: "absolute",
-  bottom: 0,
+  // position: "absolute",
+  top: 0,
   left: 0,
   width: "100%",
-  height: "50px",
+  height: "80px",
   backgroundColor: "#f1f1f1",
   display: "flex",
   alignItems: "center",
