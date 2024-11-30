@@ -14,7 +14,6 @@ const App = () => {
   return (
     <div style={appStyle}>
       <PlayerSection
-        playerName="Player 1"
         life={player1Life}
         setLife={setPlayer1Life}
         backgroundColor="#f0f8ff"
@@ -26,7 +25,6 @@ const App = () => {
       </button>
 
       <PlayerSection
-        playerName="Player 2"
         life={player2Life}
         setLife={setPlayer2Life}
         backgroundColor="#ffe4e1"
@@ -45,16 +43,15 @@ const appStyle = {
   width: "100vw",
   overflow: "hidden",
   position: "relative",
+  alignItems: "center",
 };
 
 const resetButtonStyle = {
-  position: "absolute",
-  bottom: "70px", // Adjusted to make space for ads
-  left: "50%",
-  transform: "translateX(-50%)",
+  position: "relative",
   padding: "0.8rem 1.5rem",
   fontSize: "1rem",
   fontWeight: "bold",
+  width: "33.3%",
   backgroundColor: "#333",
   color: "#fff",
   border: "none",
