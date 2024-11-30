@@ -1,5 +1,7 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react";
 
+// eslint-disable-next-line react/prop-types
 const PlayerSection = ({ life, setLife, backgroundColor, flip }) => {
   const [trackerText, setTrackerText] = useState(""); // To store the dynamic tracker text
   const [delta, setDelta] = useState(0); // To store the cumulative change
@@ -102,7 +104,7 @@ const controlsStyle = {
   justifyContent: "center",
   alignItems: "center",
 };
-gi;
+
 const buttonStyle = {
   padding: "0.4rem 1.5rem",
   fontSize: "3rem",
