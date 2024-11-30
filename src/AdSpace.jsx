@@ -12,7 +12,7 @@ const adSpaceStyle = {
   // position: "absolute",
   top: 0,
   left: 0,
-  width: "100%",
+  width: "100vw",
   height: "80px",
   backgroundColor: "#f1f1f1",
   display: "flex",
