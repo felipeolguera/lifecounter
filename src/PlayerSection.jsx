@@ -35,7 +35,7 @@ const PlayerSection = ({ life, setLife, backgroundColor, flip }) => {
       const timeout = setTimeout(() => {
         setTrackerText("");
         setDelta(0); // Reset delta after clearing the tracker text
-      }, 3000);
+      }, 2500);
       return () => clearTimeout(timeout);
     }
   }, [delta]);
@@ -47,14 +47,6 @@ const PlayerSection = ({ life, setLife, backgroundColor, flip }) => {
         transform: flip ? "rotate(180deg)" : "none",
       }}
     >
-      <p
-        style={
-          flip ? { ...trackerStyle, transform: "rotate(360deg)" } : trackerStyle
-        }
-      >
-        {trackerText}
-      </p>
-
       <div style={controlsStyle}>
         <button
           onClick={increaseLife}
@@ -72,6 +64,14 @@ const PlayerSection = ({ life, setLife, backgroundColor, flip }) => {
           -
         </button>
       </div>
+
+      <p
+        style={
+          flip ? { ...trackerStyle, transform: "rotate(360deg)" } : trackerStyle
+        }
+      >
+        {trackerText}
+      </p>
     </div>
   );
 };
@@ -82,6 +82,10 @@ const playerSectionStyle = {
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
+  marginTop: "1rem",
+  backgroundImage: "url('/bgimage.jpg')",
+  backgroundSize: "cover", // Ensure the image covers the entire area
+  backgroundPosition: "center", // Center the image
 };
 
 const lifeStyle = {
@@ -100,7 +104,7 @@ const trackerStyle = {
 
 const controlsStyle = {
   display: "flex",
-  gap: "1.5rem",
+  gap: "1rem",
   justifyContent: "center",
   alignItems: "center",
 };

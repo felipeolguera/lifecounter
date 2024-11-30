@@ -48,10 +48,10 @@ const appStyle = {
 
 const resetButtonStyle = {
   position: "relative",
-  padding: "0.8rem 1.5rem",
+  padding: "0.8rem 1rem",
   fontSize: "1rem",
   fontWeight: "bold",
-  width: "33.3%",
+  width: "30%",
   backgroundColor: "#333",
   color: "#fff",
   border: "none",
